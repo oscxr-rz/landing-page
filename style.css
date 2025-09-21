@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Archivo Black", sans-serif;
+}
+
+/* Barra de navegación */
+.navBar {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(90deg, #32e6fe, #2ab3e5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0 2rem;
+}
+
+.navBar .Logo {
+    width: auto;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.navBar .Logo:hover {
+    transform: translateY(2px);
+}
+
+.navBar .Logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.navBar .Enlaces {
+    width: auto;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navBar .Enlaces li {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navBar .Enlaces a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navBar .Enlaces a::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: white;
+    transition: width 0.4s ease;
+}
+
+.navBar .Enlaces a:hover::after {
+    width: 100%;
+}
+
+.navBar .Enlaces a:hover {
+    transform: translateY(2px);
+}
+
+/* Banner */
+.Banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(90deg, #32e6fe, #2ab3e5);
+    position: relative;
+    overflow: hidden;
+}
+
+.Banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.Banner .Contenido {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 2;
+    position: relative;
+}
+
+.Banner .Marca {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    animation: slideInLeft 1s ease-out;
+}
+
+.Banner .Marca h1 {
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    font-size: 3rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.Banner .Marca p {
+    color: white;
+    padding: 20px;
+    font-size: 1.2rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    opacity: 0.95;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.Banner .Boton {
+    padding: 20px;
+}
+
+.Banner .Boton button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    background: linear-gradient(135deg, #e886bf 0%, #ff92d1 100%);
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(226, 130, 186, 0.3);
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.Banner .Boton button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.Banner .Boton button:hover::before {
+    left: 100%;
+}
+
+.Banner .Boton button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(226, 130, 186, 0.4);
+    background: linear-gradient(135deg, #ed92c7 0%, #e368bc 100%);
+}
+
+.Banner .Boton button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(226, 130, 186, 0.3);
+}
+
+.Banner .Imagen {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+}
+
+.Banner .Imagen img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Carrusel de productos */
+.Carrusel {
+    width: 100%;
+    background: white;
+    position: relative;
+}
+
+.ContenedorCarrusel {
+    background: white;
+    padding: 50px 20px;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.NavegacionCarrusel {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateY(-50%);
+    padding: 0 10px;
+}
+
+.BtnPrev,
+.BtnNext {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.BtnPrev:hover,
+.BtnNext:hover {
+    background: #f8f8f8;
+    border-color: #ccc;
+    color: #333;
+}
+
+.ProductosWrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.Producto {
+    flex: 0 0 auto;
+    width: 250px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.ImagenProducto {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.ImagenProducto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.Producto:hover .ImagenProducto img {
+    transform: scale(1.05);
+}
+
+.ContenidoProducto {
+    padding: 20px;
+    background: white;
+}
+
+.ContenidoProducto h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.ContenidoProducto p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.ContenidoProducto .precio {
+    font-size: 16px;
+    font-weight: 700;
+    color: #e91e63;
+    margin-bottom: 15px;
+}
+
+.BtnAgregar {
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.BtnAgregar:hover {
+    background: #c2185b;
+}
+
+.VerTodosProductos {
+    background: transparent;
+    color: #e91e63;
+    border: 2px solid #e91e63;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.VerTodosProductos:hover {
+    background: #e91e63;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ProductosWrapper {
+        gap: 20px;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 0 10px;
+        scroll-snap-type: x mandatory;
+    }
+    
+    .Producto {
+        scroll-snap-align: start;
+        flex: 0 0 220px;
+    }
+    
+    .NavegacionCarrusel {
+        display: none;
+    }
+    
+    .ContenedorCarrusel {
+        padding: 30px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Producto {
+        flex: 0 0 200px;
+        width: 200px;
+    }
+    
+    .ImagenProducto {
+        height: 150px;
+    }
+    
+    .ContenidoProducto {
+        padding: 15px;
+    }
+}

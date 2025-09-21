@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pasteles</title>
+</head>
+
+<body>
+    <!-- Barra de navegacion -->
+    <nav class="navBar">
+        <div class="Logo">
+            <img src="img/logo.png" alt="" />
+        </div>
+        <ul class="Enlaces">
+            <li><a href="#Banner">Inicio</a></li>
+            <li><a href="#Carrusel">Productos</a></li>
+            <li><a href="">Información</a></li>
+            <li><a href="">Ubicación</a></li>
+            <li><a href="">Reseñas</a></li>
+            <li><a href="">Iniciar sesión</a></li>
+            <li><a href="">Carrito</a></li>
+        </ul>
+    </nav>
+
+    <!-- Baner principal -->
+    <section class="Banner" id="Banner">
+        <div class="Contenido">
+            <div class="Marca">
+                <h1>Nombre de la marca</h1>
+                <p>Descripción de la marca</p>
+                <div class="Boton">
+                    <button>Ver productos</button>
+                </div>
+            </div>
+            <div class="Imagen">
+                <img src="img/imgBanner.png" alt="" />
+            </div>
+        </div>
+    </section>
+
+    <!-- HTML del Carrusel -->
+    <section class="Carrusel" id="Carrusel">
+        <div class="Ondas">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 190">
+                <defs>
+                    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#32e6fe;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#2ab3e5;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#waveGradient)" fill-opacity="1"
+                    d="M0,128L34.3,112C68.6,96,137,64,206,53.3C274.3,43,343,53,411,80C480,107,549,149,617,144C685.7,139,754,85,823,96C891.4,107,960,181,1029,181.3C1097.1,181,1166,107,1234,74.7C1302.9,43,1371,53,1406,58.7L1440,64L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z">
+                </path>
+            </svg>
+        </div>
+
+        <div class="ContenedorCarrusel">
+            <div class="NavegacionCarrusel">
+                <div class="BtnPrev">‹</div>
+                <div class="BtnNext">›</div>
+            </div>
+
+            <div class="ProductosWrapper">
+                <div class="Producto">
+                    <div class="ImagenProducto">
+                        <img src="https://via.placeholder.com/200x150/ff6b6b/ffffff?text=Torta+Fresa"
+                            alt="Torta de Fresa">
+                    </div>
+                    <div class="ContenidoProducto">
+                        <h3>Torta de Fresa</h3>
+                        <p>Deliciosa torta con fresas frescas</p>
+                        <p class="precio">$250 pesos</p>
+                        <button class="BtnAgregar">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="Producto">
+                    <div class="ImagenProducto">
+                        <img src="https://via.placeholder.com/200x150/8b4513/ffffff?text=Tarta+Chocolate"
+                            alt="Tarta de Chocolate">
+                    </div>
+                    <div class="ContenidoProducto">
+                        <h3>Tarta de Chocolate</h3>
+                        <p>Rica tarta con chocolate premium</p>
+                        <p class="precio">$280 pesos</p>
+                        <button class="BtnAgregar">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="Producto">
+                    <div class="ImagenProducto">
+                        <img src="https://via.placeholder.com/200x150/ff1493/ffffff?text=Cheesecake" alt="Cheesecake">
+                    </div>
+                    <div class="ContenidoProducto">
+                        <h3>Cheesecake</h3>
+                        <p>Suave cheesecake con base de galleta</p>
+                        <p class="precio">$300 pesos</p>
+                        <button class="BtnAgregar">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="Producto">
+                    <div class="ImagenProducto">
+                        <img src="https://via.placeholder.com/200x150/32cd32/ffffff?text=Tarta+Limón"
+                            alt="Tarta de Limón">
+                    </div>
+                    <div class="ContenidoProducto">
+                        <h3>Tarta de Limón</h3>
+                        <p>Refrescante tarta de limón</p>
+                        <p class="precio">$260 pesos</p>
+                        <button class="BtnAgregar">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="VerTodosProductos">Ver todos los productos</button>
+        </div>
+    </section>
+
+    <!-- <section class="Informacion">
+        <img src="" alt="">
+        <h2>titulo</h2>
+        <p>Descrión</p>
+    </section>
+
+
+    <section class="Ubicacion">
+        <h2>Titulo</h2>
+        <p>Contacto</p>
+    </section>
+
+    <section class="Reseñas">
+        <h2>Titulo</h2>
+        <div class="ContenidoReseña">
+            <p>contenido</p>
+            <div></div>
+            <cite>Autor</cite>
+        </div>
+    </section>
+
+    <div class="Contacto">
+        <div>Whatsapp</div>
+    </div>
+
+    <footer class="Footer">
+        <h3>Titulo</h3>
+        <div>
+            <p>seccion</p>
+        </div>
+        <div>
+            <p>seccion</p>
+        </div>
+        <div>
+            <p>seccion</p>
+        </div>
+    </footer> -->
+</body>
+
+</html>
