@@ -364,41 +364,240 @@
     color: white;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .ProductosWrapper {
-        gap: 20px;
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding: 0 10px;
-        scroll-snap-type: x mandatory;
-    }
-    
-    .Producto {
-        scroll-snap-align: start;
-        flex: 0 0 220px;
-    }
-    
-    .NavegacionCarrusel {
-        display: none;
-    }
-    
-    .ContenedorCarrusel {
-        padding: 30px 10px;
-    }
+/* Información */
+.Informacion {
+    padding: 0;
+    background: #0099ff;
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    overflow: visible;
 }
 
-@media (max-width: 480px) {
-    .Producto {
-        flex: 0 0 200px;
-        width: 200px;
-    }
-    
-    .ImagenProducto {
-        height: 150px;
-    }
-    
-    .ContenidoProducto {
-        padding: 15px;
-    }
+.Contenido {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.Imagen {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.Imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(1.1) contrast(1.15) saturate(1.1);
+    transition: filter 0.3s ease;
+}
+
+.Info {
+    padding: 60px 50px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.Info h2 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    background-clip: text;
+    margin-bottom: 25px;
+    margin-top: 40px;
+    position: relative;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.Info h2::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #477cd0, #2c5e9b);
+    border-radius: 2px;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+.descripcion {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 40px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.PuntosInfo {
+    margin-bottom: 40px;
+}
+
+.Punto {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+
+.Punto h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.Punto p {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 300;
+}
+
+.RedesSociales {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+/* Ubicación */
+.Ubicacion {
+    background: #0099ff;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ubicacion-contenido {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+.info-ubicacion {
+    padding: 60px 50px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.info-ubicacion h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    background-clip: text;
+    margin-bottom: 25px;
+    margin-top: 40px;
+    position: relative;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.info-ubicacion > p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.contacto-info {
+    margin-bottom: 40px;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background 0.3s ease;
+}
+
+.contacto-item .icono {
+    margin-right: 20px;
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.contacto-item h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.contacto-item p {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 300;
+}
+
+.mapa-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 90%;
+    max-height: 90vh;
+    border: none;
+    display: block;
+    filter: brightness(0.9) contrast(1.1) saturate(0.8);
 }
