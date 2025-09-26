@@ -120,12 +120,16 @@
     font-weight: 600;
     border: none;
     background: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #db2777 100%);
-    color: white;
     cursor: pointer;
     border-radius: 60px;
     letter-spacing: 0.3px;
     position: relative;
     overflow: hidden;
+}
+
+.Banner .Boton button a {
+    text-decoration: none;
+    color: white;
 }
 
 .Banner .Imagen {
@@ -192,7 +196,7 @@
     cursor: pointer;
 }
 
-.ProductosWrapper {
+.Productos {
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -448,20 +452,6 @@
     background: rgba(255, 255, 255, 0.03);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.contacto-item .icono {
-    margin-right: 20px;
-    flex-shrink: 0;
-    width: 45px;
-    height: 45px;
-    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
 }
 
 .contacto-item h4 {

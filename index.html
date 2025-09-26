@@ -18,20 +18,20 @@
         <ul class="Enlaces">
             <li><a href="#Banner">Inicio</a></li>
             <li><a href="#Carrusel">Productos</a></li>
-            <li><a href="">Información</a></li>
-            <li><a href="">Ubicación</a></li>
-            <li><a href="">Reseñas</a></li>
+            <li><a href="#Informacion">Información</a></li>
+            <li><a href="#Ubicacion">Ubicación</a></li>
+            <li><a href="#Reseñas">Reseñas</a></li>
             <li>
-                <svg viewBox="0 0 24 24" width="24" height="24" style="fill: white; vertical-align: middle;">
-                    <path
-                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                </svg>
+                <a href=""><svg viewBox="0 0 24 24" width="24" height="24" style="fill: white; vertical-align: middle;">
+                        <path
+                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    </svg></a>
             </li>
             <li>
-                <svg viewBox="0 0 24 24" width="24" height="24" style="fill: white; vertical-align: middle;">
-                    <path
-                        d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2v10z" />
-                </svg>
+                <a href=""><svg viewBox="0 0 24 24" width="24" height="24" style="fill: white; vertical-align: middle;">
+                        <path
+                            d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2v10z" />
+                    </svg></a>
             </li>
         </ul>
     </nav>
@@ -43,7 +43,7 @@
                 <h1>Nombre de la marca</h1>
                 <p>Descripción de la marca</p>
                 <div class="Boton">
-                    <button>Ver productos</button>
+                    <button><a href="#Carrusel">Ver productos</a></button>
                 </div>
             </div>
             <div class="Imagen">
@@ -69,7 +69,7 @@
                 <div class="BtnNext">›</div>
             </div>
 
-            <div class="ProductosWrapper">
+            <div class="Productos">
                 <div class="Producto">
                     <div class="ImagenProducto">
                         <img src="img/pastel.png" alt="Torta de Fresa">
@@ -123,7 +123,7 @@
         </div>
     </section>
 
-    <section class="Informacion">
+    <section class="Informacion" id="Informacion">
         <div class="Contenido">
             <div class="Imagen">
                 <img src="img/pasteleria.jpg" alt="Pastelería">
@@ -132,7 +132,7 @@
                 <h2>Sobre Nosotros</h2>
                 <p class="descripcion">
                     Somos una pastelería con más de 10 años de experiencia, creando momentos dulces y únicos para cada
-                    ocasión. Nos apasiona la calidad, la creatividad y la satisfacción de nuestros clientes.
+                    ocasión.
                 </p>
                 <div class="PuntosInfo">
                     <div class="Punto">
@@ -164,7 +164,7 @@
     </section>
 
 
-    <section class="Ubicacion">
+    <section class="Ubicacion" id="Ubicacion">
         <div class="ubicacion-contenido">
             <div class="info-ubicacion">
                 <h2>Nuestra Ubicación</h2>
@@ -172,9 +172,6 @@
 
                 <div class="contacto-info">
                     <div class="contacto-item">
-                        <div class="icono">
-
-                        </div>
                         <div>
                             <h4>Dirección</h4>
                             <p>C.B.T.I.S 150<br>Oaxaca</p>
@@ -182,9 +179,6 @@
                     </div>
 
                     <div class="contacto-item">
-                        <div class="icono">
-
-                        </div>
                         <div>
                             <h4>Teléfono</h4>
                             <p>+52 951 XXX XXXX<br>Lun - Dom: 8:00 AM - 8:00 PM</p>
@@ -192,9 +186,6 @@
                     </div>
 
                     <div class="contacto-item">
-                        <div class="icono">
-
-                        </div>
                         <div>
                             <h4>Email</h4>
                             <p>contacto@pasteleria.com<br>pedidos@pasteleria.com</p>
@@ -202,9 +193,6 @@
                     </div>
 
                     <div class="contacto-item">
-                        <div class="icono">
-
-                        </div>
                         <div>
                             <h4>Horarios</h4>
                             <p>Lunes a Viernes: 7:00 AM - 9:00 PM<br>Sábados y Domingos: 8:00 AM - 10:00 PM</p>
@@ -229,7 +217,7 @@
         </path>
     </svg>
 
-    <section class="Reseñas">
+    <section class="Reseñas" id="Reseñas">
         <h2>Lo que dicen nuestros clientes</h2>
 
         <div class="reseñas-grid">
